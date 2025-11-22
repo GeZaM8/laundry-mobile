@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'splash_screen.dart';
+import 'dashboard_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
         onFinished: () {
           _navKey.currentState?.pushReplacement(
             MaterialPageRoute(
-              builder: (_) => const MyHomePage(title: 'AntarBersih'),
+              builder: (_) => const DashboardScreen(),
             ),
           );
         },

@@ -65,20 +65,20 @@ class _SplashScreenState extends State<SplashScreen> {
                 ? const SizedBox.shrink(key: ValueKey('blank'))
                 : !_blueBg
                 ? Image.asset(
-                    'birulogo.png',
+                    'assets/images/birulogo.png',
                     key: const ValueKey('logo-blue-on-white'),
                     width: 84,
                     height: 84,
                   )
                 : !_showText
                 ? Image.asset(
-                    'putihlogo.png',
+                    'assets/images/putihlogo.png',
                     key: const ValueKey('logo-white-on-blue'),
                     width: 84,
                     height: 84,
                   )
                 : Image.asset(
-                    'teksputih.png',
+                    'assets/images/teksputih.png',
                     key: const ValueKey('text-white-on-blue'),
                     height: 320,
                     width: 320,
