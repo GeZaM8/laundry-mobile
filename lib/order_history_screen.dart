@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'api_client.dart';
 
 class OrderHistoryScreen extends StatefulWidget {
-  const OrderHistoryScreen({super.key});
+  final String? initialFilter; // all, pending, done
+
+  const OrderHistoryScreen({super.key, this.initialFilter});
 
   @override
   State<OrderHistoryScreen> createState() => _OrderHistoryScreenState();
@@ -18,6 +20,7 @@ class _OrderHistoryScreenState extends State<OrderHistoryScreen> {
   @override
   void initState() {
     super.initState();
+    _filter = (widget.initialFilter == 'pending' || widget.initialFilter == 'done') ? widget.initialFilter! : 'all';
     _load();
   }
 
